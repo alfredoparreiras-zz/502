@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&display=swap');
+
+
+* { 
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html { 
+    font-size: 16px;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Header Section */
+
+header { 
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+
+
+}
+
+header h1{ 
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.menu ul { 
+    display: flex;
+    margin-left: 1rem;
+}
+
+.menu li { 
+    padding: 0.5rem;
+}
+
+.menu a { 
+    font-size: 0.9rem;
+    color: #3b2f2f;
+}
+
+.menu a:hover{ 
+    border-bottom: 1px #3b2f2f solid;
+}
+
+.icon-menu ul { 
+    display: flex;
+    margin-right: 1rem;
+}
+
+.icon-menu li { 
+    padding: 1rem;
+}
+
+.icon-menu img { 
+    width: 1.2rem;
+}
+
+/* About */
+
+.especial-product { 
+    height: 90vh;
+    background-size: cover;
+    background-position: 0% 50%;
+    display: flex;
+    margin-top: 4rem;
+    align-items: center;
+    position: relative;
+    top: -5rem;
+}
+
+.especial-product-div{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    position: relative;
+    top: -2rem;
+}
+
+.especial-img-carousel { 
+    width: 40%;
+}
+
+.especial-product-name { 
+    width: 60%;
+    font-size: 2.5rem;
+    padding: 2rem 0;
+    
+}
+
+.especial-product-descr { 
+    width: 60%;
+    line-height: 1.5;
+}
+
+#batedeira { 
+    width: 85%;
+    position: relative;
+    left: 8rem;
+}
+
+#espc-bat { 
+    position: relative;
+    width: 60%;
+    left: 8rem;
+    top: 1rem;
+}
+
+.product-purchase.purchase-especial {
+    margin-top: 1.5rem;
+}
+
+/* Products Section */
+
+.center-products { 
+    display: flex;
+    justify-content: center;
+}
+
+.products { 
+    height: 200vh;
+    width:98%;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    row-gap: 2rem;
+    column-gap: 10px;
+    position: relative;
+
+}
+
+.product { 
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.product:hover{ 
+    border: 1px #3b2f2f solid;
+    border-radius: 16px;
+}
+
+.img-carousel { 
+    display: flex ;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    background-color: #F1F2F4;
+
+}
+.product img { 
+    width: 100%; 
+    
+}
+
+.product-name { 
+    font-size: 1rem;
+    margin: 1.2rem 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.product-price { 
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+}
+
+.product-purchase { 
+    border: 2px solid #3b2f2f;
+    padding: .7rem;
+    border-radius: 0.8rem;
+    margin-top: 1rem;
+    color: #3b2f2f;
+    font-family: 'Nunito', sans-serif;
+    width: 6rem;
+    text-align: center;
+}
+
+.product-purchase:hover{ 
+    color: #C0C1C3;
+    background-color: black;
+}
+
+
+
