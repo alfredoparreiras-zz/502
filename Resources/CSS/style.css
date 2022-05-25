@@ -98,6 +98,10 @@ header h1{
     line-height: 1.5;
 }
 
+.batedeira { 
+    display: none;
+}
+
 #batedeira { 
     width: 85%;
     position: relative;
