@@ -108,11 +108,6 @@ header h1 {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-
-}
-
-.especial-img-carousel{ 
-
 }
 
 .especial-img-carousel img { 
@@ -125,7 +120,6 @@ header h1 {
   width: 60%;
   text-align: justify;
   margin-top: 2rem;
-
 
 }
 
@@ -339,6 +333,6 @@ footer {
 
   .center-products { 
     top: -65rem;
-    TODO: Espaco em Branco nesse bloco.
+    /* TODO: Espaco em Branco nesse bloco. */
   }
 }
