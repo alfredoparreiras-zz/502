@@ -6,39 +6,24 @@
 :root {
   /* Colors */
   --first-color: white;
-  --second-color: black;
+  --second-color: #3b2f2f;
 
   /* -- Fonts and Typhography */
   /* .5rem = 8px | 1rem = 16px | 1.5rem = 24px*/
   --body-font: "Nunito", sans-serif; /* Font Family */
   --biggest-font: 2.3rem;
+  --big-font: 1.75rem;
   --productsName-font: 1.3rem;
   --normal-font-size: 0.9rem;
   --smaller-font-size: 0.75rem;
-
-  --big-font: 1.75rem;
 }
 
-/* ----- Responsive Typhography ----- */
-@media screen and (min-width: 1024px) {
-  :root {
-    --biggest-font-size: 3rem;
-    --normal-font-size: 1rem;
-    --smaller-font-size: 0.813rem;
-  }
-}
 
 /* ----- Reusable CSS Class ------ */
-.container {
-  max-width: 1024px;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
-
 
 body {
   font-family: var(--body-font);
+  scroll-behavior: smooth;
 
 }
 
@@ -81,6 +66,7 @@ header {
 
 header h1 {
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .icon-menu ul {
@@ -103,7 +89,7 @@ header h1 {
 /* especial-product*/
 
 .especial-product { 
-  height: 90vh;
+  height: 95vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -131,7 +117,7 @@ header h1 {
 
 .especial-product-descr { 
   font-size: var(--normal-font-size);
-  line-height: 1.2;
+  line-height: 1.5;
   padding-bottom: .65rem;
 }
 
@@ -149,20 +135,26 @@ header h1 {
 }
 
 /* Other Products */
+
 .center-products { 
+  /* height: 300vh; */
   display: flex;
   position: relative;
-  top: 8rem;
+  /* top: 8rem; */
   justify-content: center;
   flex-flow: column nowrap;
   margin-bottom: 4rem;
+  background-color: #FBFAFA;
 }
 
 .center-products h1 { 
   color: var(--second-color);
   font-size: var(--biggest-font);
   text-align: center;
-  font-weight: 600;  
+  font-weight: 700;  
+  padding-top: 2.5rem;
+  text-transform: uppercase;
+  align-self: center;
 }
 .products { 
   position: relative;
@@ -177,6 +169,8 @@ header h1 {
   margin-left: .5rem;
   margin-right: .5rem;
   grid-auto-rows: 1fr;
+
+  /* TODO: Parece que o grid esta na pagina inteira. */
 }
 
 .product { 
@@ -225,22 +219,29 @@ header h1 {
 /* ------ Footer ------ */
 
 footer { 
-  height: 4rem;
   background-color: var(--second-color);
   position: relative;
-  top: 8rem;
+  top: -5rem;
+  height: 5rem;
 }
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 520px) {
 
-  .menu, .icon-menu { 
+  .icon-menu { 
     display: none;
   }
 
   header { 
+    height: 6.5rem;
+    flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+  }
+
+  .menu ul { 
+    position: relative;
+    top: -.8rem;
   }
 
   header h1 { 
@@ -248,8 +249,14 @@ footer {
   }
 
   .especial-product { 
+    height: 85vh;
     position: relative;
-    top: -5rem;
+
+  }
+
+  .especial-product div { 
+    position: relative;
+    top: -5%;
   }
 
   .especial-product-name{ 
@@ -268,16 +275,20 @@ footer {
 
   .especial-img-carousel img { 
     margin-top: 3rem;
+    width: 115%;
+    position: relative;
+    right: 8%;
   }
 
   .center-products { 
     top: 2rem;
   }
 
+
   .products { 
     grid-template-columns: 100%;
   }
-}
+} 
 
 /* For medium devices */
 @media screen and (min-width: 767px) {
@@ -286,9 +297,21 @@ footer {
 
 /* For large devices */
 @media screen and (min-width: 1024px) {
+
+  .center-products { 
+    height: 155vh;
+    /* TODO: melhor forma de ajustar tamanho? */
+  }
+  
   .products { 
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2, 1fr);
+  }
+
+  footer { 
+    background-color: var(--second-color);
+    position: relative;
+    top: -4.1rem;
   }
 }
 
